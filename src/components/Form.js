@@ -51,19 +51,11 @@ export default function Form({list, setList, setTotal, isEditing, setIsEditing})
                 <S.InputWrapper>
                     <S.Container>
                         <S.Label>지출 항목</S.Label>
-                        {isEditing>=0 ?
-                            <S.Input onChange={onChangeInput} value={title}/>
-                            :
-                            <S.Input placeholder="예) 렌트비" onChange={onChangeInput} value={title}/>
-                        }
+                        <S.Input placeholder="예) 렌트비" onChange={onChangeInput} value={title}/>
                     </S.Container>
                     <S.Container>
                         <S.Label>비용</S.Label>
-                        {isEditing>=0 ?
-                            <S.Input type="number" onChange={onChangeCost} value={cost}/>
-                            :
-                            <S.Input type="number" placeholder="0" onChange={onChangeCost} value={cost}/>
-                        }
+                        <S.Input type="number" placeholder="0" onChange={onChangeCost} value={cost}/>
                     </S.Container>
                 </S.InputWrapper>
                 {isEditing>=0 ?
